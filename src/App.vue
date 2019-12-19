@@ -1,23 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <div id="app" class="st-container st-effect" v-bind:class="{ 'st-menu-open' : isOpen}">
+      <app-NavMenu></app-NavMenu>
+      <div class="st-pusher">
+        <div class="st-content">
+          <div class="st-content-inner">
+            <img alt="Vue logo" src="./assets/logo.png" @click.prevent="openMenu">
+          </div>
+        </div>
+      </div>
   </div>
 </template>
 
 <script>
+import NavMenu from './components/NavMenu'
 
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    'app-NavMenu' : NavMenu
+  },
+  data () {
+    return {
+      isOpen : false
+    }
+  },
+  methods: {
+    openMenu() {
+      this.isOpen = !this.isOpen;
+    }
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
