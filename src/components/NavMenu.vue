@@ -1,14 +1,11 @@
 <template>
-    <div class="st-menu st-effect">
-        <div>
-            <div>
-                <ul>
-                    <li> <a href="">Menu 01</a> </li>
-                    <li> <a href="">Menu 02</a> </li>
-                    <li> <a href="">Menu 03</a> </li>
-                </ul>
-            </div>
-        </div>
+    <div class="nav-menu-menu nav-menu-effect">
+        <h2>Menu Principal</h2>
+        <ul>
+            <li> <a href="">Eventos</a> </li>
+            <li> <a href="">Ferramentas</a> </li>
+            <li> <a href="">API's</a> </li>
+        </ul>
     </div>
 </template>
 

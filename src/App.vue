@@ -1,9 +1,9 @@
 <template>
-  <div id="app" class="st-container st-effect" v-bind:class="{ 'st-menu-open' : isOpen}">
+  <div id="app" class="nav-menu-container nav-menu-effect" v-bind:class="{ 'nav-menu-menu-open' : isOpen}">
       <app-NavMenu></app-NavMenu>
-      <div class="st-pusher">
-        <div class="st-content">
-          <div class="st-content-inner">
+      <div class="nav-menu-pusher">
+        <div class="nav-menu-content">
+          <div class="nav-menu-content-inner">
             <img alt="Vue logo" src="./assets/logo.png" @click.prevent="openMenu">
           </div>
         </div>

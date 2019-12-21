@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 html,
 body{
-    height: 100%;
+	height: 100%;
+	margin: 0;
 }
 
 body {
@@ -8,35 +11,35 @@ body {
     overflow: hidden;
 }
 
-.no-csstransforms3d .st-pusher,
-.no-js .st-pusher {
+.no-csstransforms3d .nav-menu-pusher,
+.no-js .nav-menu-pusher {
 	padding-left: 300px;
 }
 
-.st-container,
-.st-pusher,
-.st-content,
-.st-content-inner {
+.nav-menu-container,
+.nav-menu-pusher,
+.nav-menu-content,
+.nav-menu-content-inner {
     height: 100%;
     width: 100%;
 }
 
-.st-content {
+.nav-menu-content {
 	overflow-y: auto;
 	background: #f3efe0;
 }
 
-.st-content,
-.st-content-inner {
+.nav-menu-content,
+.nav-menu-content-inner {
 	position: relative;
 }
 
-.st-container {
+.nav-menu-container {
 	position: relative;
 	overflow: hidden;
 }
 
-.st-pusher {
+.nav-menu-pusher {
 	position: fixed;
 	left: 0;
 	z-index: 99;
@@ -46,7 +49,7 @@ body {
 	transition: transform 0.5s;
 }
 
-.st-menu-open .st-pusher::after {
+.nav-menu-menu-open .nav-menu-pusher::after {
 	width: 100%;
 	height: 100%;
 	opacity: 1;
@@ -54,7 +57,7 @@ body {
 	transition: opacity 0.5s;
 }
 
-.st-menu {
+.nav-menu-menu {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -67,7 +70,7 @@ body {
 	transition: all 0.5s;
 }
 
-.st-menu::after {
+.nav-menu-menu::after {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -80,7 +83,7 @@ body {
 	transition: opacity 0.5s;
 }
 
-.st-menu-open .st-menu::after {
+.nav-menu-menu-open .nav-menu-menu::after {
 	width: 0;
 	height: 0;
 	opacity: 0;
@@ -88,28 +91,28 @@ body {
 	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 
-.st-effect.st-container {
+.nav-menu-effect.nav-menu-container {
 	-webkit-perspective: 1500px;
 	perspective: 1500px;
 }
 
-.st-effect .st-pusher {
+.nav-menu-effect .nav-menu-pusher {
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 
-.st-effect.st-menu-open .st-pusher {
+.nav-menu-effect.nav-menu-menu-open .nav-menu-pusher {
 	-webkit-transform: translate3d(0, 0, -300px);
 	transform: translate3d(0, 0, -300px);
 }
 
-.st-effect.st-menu {
+.nav-menu-effect.nav-menu-menu {
 	opacity: 1;
 	-webkit-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
 }
 
-.st-effect.st-menu-open .st-effect.st-menu {
+.nav-menu-effect.nav-menu-menu-open .nav-menu-effect.nav-menu-menu {
 	visibility: visible;
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
@@ -117,6 +120,52 @@ body {
 	transform: translate3d(0, 0, 0);
 }
 
-.st-effect.st-menu::after {
+.nav-menu-effect.nav-menu-menu::after {
 	display: none;
+}
+
+.nav-menu-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-menu-menu li {
+	cursor: pointer;
+	border-top: 1px solid #295685;
+	padding: .4em .4em .4em .4em;
+} 
+
+.nav-menu-menu li:last-child {
+	border-bottom: 1px solid #295685;
+}
+
+.nav-menu-menu li:hover {
+	background-color: #295685;
+}
+
+.nav-menu-menu a {
+	display: block;
+	outline: none;
+	overflow: hidden;
+	font-size: 1.2em;
+	line-height: 1em;
+	padding: .2em .2em;
+	text-decoration: none;
+	color: #ffdb58;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.nav-menu-menu a:hover {
+	color: #ffbf00;
+}
+
+.nav-menu-menu h2 {
+	font-size: 1.5em;
+	line-height: 1em;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 0 .4em 0 .4em;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
 }
