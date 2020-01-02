@@ -6,6 +6,9 @@
             <li> <a href="">Ferramentas</a> </li>
             <li> <a href="">API's</a> </li>
         </ul>
+        <ul>
+            <li> <a href="">Fechar</a> </li>
+        </ul>
     </div>
 </template>
 
